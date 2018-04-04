@@ -12,6 +12,16 @@ namespace RimStory
 
         public static Map TEST_MAP;
 
+        public static Random rng = new Random();
+        public static int randomChanceRaid = 101;
+
+
+
+
+
+
+
+
         public static int minHour = 10;
         public static int maxHour = 20;
 

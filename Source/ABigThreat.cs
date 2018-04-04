@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RimWorld;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,7 +18,7 @@ namespace RimStory
 
         }
 
-        public ABigThreat(Date date, Pawn deadPawn)
+        public ABigThreat(Date date, Faction faction)
         {
             this.date = date;
             Log.Message(date + " OPS");
