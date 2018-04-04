@@ -63,15 +63,6 @@ namespace RimStory
         public bool TryStartEvent(Map map)
         {
 
-            
-            //if(pawn1.GetSpouse() != pawn2)
-            //{
-            //    Resources.eventsToDelete.Add(this);
-            //    return false;
-            //}
-
-            
-
             bool flag = true;
             foreach(int y in yearsWhenEventStarted)
             {
@@ -81,7 +72,6 @@ namespace RimStory
                 }
             }
 
-            Log.Message("      " + flag);
             if (Utils.CurrentDay() == date.day && Utils.CurrentQuadrum() == date.quadrum && Utils.CurrentHour() >= Resources.minHour && Utils.CurrentHour() <= Resources.maxHour && Utils.CurrentYear() != date.year && flag)
             {
 
@@ -103,9 +93,7 @@ namespace RimStory
 
                 foreach (Pawn p in pawn1.Map.mapPawns.FreeColonists)
                 {
-                    //Map mapa = p.Map.mapPawns.AllPawns;
-                    //AddAttendedOurAnniversaryThoughts(p);
-                    //Log.Message(p.LabelShort);
+
                     if (p == pawn1 || p == pawn2)
                     {
                         if (p.GetSpouse() == pawn1 || p.GetSpouse() == pawn2)
