@@ -17,9 +17,6 @@ namespace RimStory
         static void Postfix(Dialog_DebugActionsMenu __instance)
         {
 
-            //MakeNewButton();
-            //Log.Message(" hey");
-            //Resources.eventsLog.Add(new Breakup(Utils.CurrentDate(), initiator, recipient, __result));
         }
 
         protected override void DoListingItems()

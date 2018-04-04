@@ -48,7 +48,7 @@ namespace RimStory
             }
             
 
-            Log.Message(this.date.day + " ");
+          
 
         }
 

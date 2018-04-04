@@ -13,7 +13,7 @@ namespace RimStory
         public static Map TEST_MAP;
 
         public static Random rng = new Random();
-        public static int randomChanceRaid = 51;
+        public static int randomChanceRaid = 6;
 
 
 

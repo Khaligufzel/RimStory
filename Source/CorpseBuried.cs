@@ -18,7 +18,7 @@ namespace RimStory.Harmony
             Resources.lastGrave = __instance;
             if (__instance.Corpse.InnerPawn.IsColonist)
             {
-                Log.Message("Colonist buried "+ __instance.Corpse.InnerPawn);
+
                 Resources.deadPawnsForMassFuneralBuried.Add(__instance.Corpse.InnerPawn);
             }
         }

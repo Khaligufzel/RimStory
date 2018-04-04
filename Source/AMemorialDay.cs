@@ -26,7 +26,7 @@ namespace RimStory
         {
             this.date = date;
             this.deadPawn = deadPawn;
-            Log.Message(date + " mem day");
+            
         }
 
         public Date Date()
@@ -71,10 +71,10 @@ namespace RimStory
                 }
             }
 
-            Log.Message("      " + flag);
+           
             if (Utils.CurrentDay() == date.day && Utils.CurrentQuadrum() == date.quadrum && Utils.CurrentHour() >= Resources.minHour && Utils.CurrentHour() <= Resources.maxHour && Utils.CurrentYear() != date.year && flag)
             {
-                Log.Message("Funeral should start" + flag);
+               
                 Pawn pawn = PartyUtility.FindRandomPartyOrganizer(Faction.OfPlayer, map);
 
 

@@ -16,7 +16,7 @@ namespace RimStory
             Scribe_References.Look<Building_Grave>(ref Resources.lastGrave, "RS_LastGrave", true);
 
 
-            Log.Warning("Before save.");
+      
             Scribe_Collections.Look<IEvent>(ref Resources.events, "RS_Events", LookMode.Deep, null);
             Scribe_Collections.Look<IEvent>(ref Resources.eventsLog, "RS_EventsLog", LookMode.Deep, null);
             Scribe_Collections.Look<Pawn>(ref Resources.pawnsAttended, "RS_PawnsAttended", LookMode.Reference, null, true);
@@ -26,12 +26,12 @@ namespace RimStory
 
 
 
-            Log.Warning("After save.");
+           
 
             Scribe_Values.Look<bool>(ref Resources.isMemorialDayCreated, "RS_Memorial_Day", false);
 
 
-            Log.Warning("Saving. "+Resources.eventsLog.Count);
+           
         }
     }
 

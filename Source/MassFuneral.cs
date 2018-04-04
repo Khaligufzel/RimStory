@@ -21,31 +21,34 @@ namespace RimStory
        
         public static bool TryStartMassFuneral(Map map)
         {
-            Pawn pawn = PartyUtility.FindRandomPartyOrganizer(Faction.OfPlayer,map);
+            if (Utils.CurrentDay() == 7 || Utils.CurrentDay() == 14)
+            {
+                Pawn pawn = PartyUtility.FindRandomPartyOrganizer(Faction.OfPlayer, map);
 
-            if (pawn == null)
-            {
-                return false;
-            }
-            IntVec3 intVec;
-            if (!RCellFinder.TryFindPartySpot(pawn, out intVec))
-            {
-                return false;
-            }
-            foreach(Pawn deadPawn in Resources.deadPawnsForMassFuneral)
-            {
+                if (pawn == null)
+                {
+                    return false;
+                }
+                IntVec3 intVec;
+                if (!RCellFinder.TryFindPartySpot(pawn, out intVec))
+                {
+                    return false;
+                }
+                foreach (Pawn deadPawn in Resources.deadPawnsForMassFuneral)
+                {
 
-            }
-            foreach(Pawn deadPawn in Resources.deadPawnsForMassFuneralBuried)
-            {
-                deadPawnsNames = deadPawnsNames + deadPawn.Label + "\n";
-            }
-            Lord lord = LordMaker.MakeNewLord(pawn.Faction, new LordJob_RimStory(Resources.lastGrave.Position, pawn), map, null);
-            Find.LetterStack.ReceiveLetter("Funeral", "Colonists are gathering to honor:\n\n"+deadPawnsNames, LetterDefOf.NeutralEvent, Resources.lastGrave);          
-       
-            deadPawnsNames = "";
-            return true;
+                }
+                foreach (Pawn deadPawn in Resources.deadPawnsForMassFuneralBuried)
+                {
+                    deadPawnsNames = deadPawnsNames + deadPawn.Label + "\n";
+                }
+                Lord lord = LordMaker.MakeNewLord(pawn.Faction, new LordJob_RimStory(Resources.lastGrave.Position, pawn), map, null);
+                Find.LetterStack.ReceiveLetter("Funeral", "Colonists are gathering to honor:\n\n" + deadPawnsNames, LetterDefOf.NeutralEvent, Resources.lastGrave);
 
+                deadPawnsNames = "";
+                return true;
+            }
+            return false;
         }
 
     }

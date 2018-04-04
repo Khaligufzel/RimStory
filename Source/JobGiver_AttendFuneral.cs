@@ -14,7 +14,7 @@ namespace RimStory
         protected override Job TryGiveJob(Pawn pawn)
         {
             
-            Log.Message("Giving job.");
+            
             Building_Grave grave = FindGrave();
             if (grave == null)
             {
@@ -62,7 +62,7 @@ namespace RimStory
             return Resources.lastGrave;
         }
         
-        [DefOf]
+      
         public class RS_JobDefOf
         {
             public static JobDef AttendFuneral;

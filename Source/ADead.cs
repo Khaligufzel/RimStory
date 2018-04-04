@@ -68,44 +68,34 @@ namespace RimStory
             {
 
 
-                //foreach (Pawn p in deadPawn.relations.PotentiallyRelatedPawns)
-                //{
-                //    foreach (PawnRelationDef item in p.GetRelations(deadPawn))
-                //    {
-
-                //        Log.Message(p + " " + item + deadPawn);
-                //    }
-                   
-                //}
-
                 foreach (Pawn p in deadPawn.relations.PotentiallyRelatedPawns)
                 {
                     if (!p.Dead && p != null)
                     {
                         foreach (PawnRelationDef item in p.GetRelations(deadPawn))
                         {
-                            Log.Message(p + " " + item + " " + deadPawn);
+                           
 
                         if (item == PawnRelationDefOf.Fiance)
                             {
                                 p.needs.mood.thoughts.memories.TryGainMemory(Thoughts.RS_DayDiedFiance);
-                                Log.Warning("thought should be added.");
+              
                             }
                         if (item == PawnRelationDefOf.Lover)
                             {
                                 p.needs.mood.thoughts.memories.TryGainMemory(Thoughts.RS_DayDiedLover);
-                                Log.Warning("thought should be added.");
+             
                             }
                         if (item == PawnRelationDefOf.Spouse)
                             {
-                                Log.Warning("thought should be added.");
+        
                                 p.needs.mood.thoughts.memories.TryGainMemory(Thoughts.RS_DayDiedSpouse);
                             }
 
                         if (p.relations.DirectRelationExists(PawnRelationDefOf.Parent, deadPawn))
                             {
 
-                            Log.Warning("thought should be added.");
+                        
                             p.needs.mood.thoughts.memories.TryGainMemory(Thoughts.RS_DayDiedFather);
                             }
                         if (p.relations.DirectRelationExists(PawnRelationDefOf.Parent, deadPawn))
@@ -114,37 +104,18 @@ namespace RimStory
                         }
                         if (item == PawnRelationDefOf.Child)
                             {
-                                Log.Warning("thought should be added.");
+   
                                 p.needs.mood.thoughts.memories.TryGainMemory(Thoughts.RS_DayDiedChild);
                             }
                         if (item == PawnRelationDefOf.Sibling)
                             {
-                                Log.Warning("thought should be added.");
+  
                                 p.needs.mood.thoughts.memories.TryGainMemory(Thoughts.RS_DayDiedSibling);
                             }
                         }
                     }
                 }
 
-                
-
-
-                //Log.Message("Relacje?");
-                //foreach (Pawn p in map.mapPawns.FreeColonists)
-                //{
-
-                //}
-
-
-                //if (Utils.CurrentDay() == date.day && Utils.CurrentHour() >= Resources.minHour && Utils.CurrentHour() <= Resources.maxHour && Utils.CurrentYear() != date.year)
-                //{
-                //    AddDeadOfRelativeThoughts(deadPawn);
-
-                //    //Find.LetterStack.ReceiveLetter("test", "test", LetterDefOf.PositiveEvent);
-
-                //    return true;
-                //}
-                //return false;
             }
 
             return true;

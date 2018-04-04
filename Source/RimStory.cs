@@ -7,17 +7,6 @@ using Verse;
 
 namespace RimStory
 {
-   
-    //[HarmonyPatch(typeof(Building_Grave), "Notify_CorpseBuried", null)]
-    //public static class BuildingGraveHook
-    //{       
-    //    [HarmonyPostfix]
-    //    public static void PlanFuneral(Building_Grave __instance, Pawn worker)
-    //    {
-    //        Log.Message("Building grave I HOPE for: "+ worker);
-    //        Log.Message("Of course I was wrong. "+worker+ " BURIED dead pawn");
-    //    }
-    //}
 
     public class RimStory : ModBase
     {
@@ -45,7 +34,7 @@ namespace RimStory
 
         public override void MapLoaded(Map map)
         {
-            Log.Message(map+" loaded.");
+
             Resources.TEST_MAP = map;
 
             base.MapLoaded(map);
@@ -76,22 +65,17 @@ namespace RimStory
 
             ///////////////////////////////////// Mass funeral \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\   
             HugsLibController.Instance.TickDelayScheduler.ScheduleCallback(() => {
-                Log.Message("1");
-
-                Log.Message(Resources.deadPawnsForMassFuneral.Count + " pawns dead");
-                Log.Message(Resources.deadPawnsForMassFuneralBuried.Count + " pawns buried");
-
+              
                 if (Resources.deadPawnsForMassFuneralBuried.Count > 0)
                 {
-                    Log.Message("2");
+                    
                     if (Resources.dateLastFuneral == null || (Utils.CurrentDay() != Resources.dateLastFuneral.getDate().day && Utils.CurrentQuadrum() != Resources.dateLastFuneral.getDate().quadrum && Utils.CurrentYear() != Resources.dateLastFuneral.getDate().year))
                     {
                         Log.Message("3");
                     }
 
                     if (MassFuneral.TryStartMassFuneral(map))
-                    {
-                            Log.Message("4");
+                    {                          
                             Resources.deadPawnsForMassFuneralBuried.Clear();
                             Resources.dateLastFuneral = Utils.CurrentDate();
                     }
