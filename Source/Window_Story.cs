@@ -5,12 +5,19 @@ using System.Text;
 using RimWorld;
 using UnityEngine;
 using Verse;
+using SettingsHelper;
 
 namespace RimStory
 {
     class Window_Story : MainTabWindow
     {
-        
+        Listing_Standard listing_Standard = new Listing_Standard();
+
+        bool sett;
+        int licz = 20;
+        String strin = "siemaneczkooo";
+        String[] strinList = new String[5];
+
         public override bool CausesMessageBackground()
         {
             return base.CausesMessageBackground();
@@ -25,33 +32,42 @@ namespace RimStory
         {
             base.DoWindowContents(rect);
 
-            // Make a background box
-            GUI.Box(new Rect(10, 10, 100, 300), "Loader Menu");
+            strinList[0] = "1111111111";
+            strinList[1] = "2222222222";
+            strinList[2] = "3333333333";
+            strinList[3] = "44444444441";
+            strinList[4] = "55555555555";
 
-        
-            if (GUI.Button(new Rect(20, 40, 80, 20), "Level 1"))
-            {
-               // MassFuneral.TryStartMassFuneral(Resources.deadPawnsForMassFuneral, Resources.lastDeadPawn.Map);
-                
-            }
+            Rect rect2 = new Rect(new Vector2(100,0), new Vector2(100,100));
+            Vector2 vect = new Vector2(licz, licz);
 
+            //listing_Standard.Begin(rect);
+            Widgets.BeginScrollView(rect, ref vect, rect2, true);
+
+            Log.Message(rect2+"");
+
+            listing_Standard.AddLabelLine("RimStory");
+            listing_Standard.AddHorizontalLine(3f);
+            listing_Standard.AddLabeledRadioList("siema", strinList, ref strin);
+            listing_Standard.AddHorizontalLine(3f);
+            listing_Standard.AddLabeledNumericalTextField<int>("xxxxxxxxxxxxxxxxxx", ref licz, minValue: 0, maxValue: 2000);
+
+            listing_Standard.AddHorizontalLine(3f);
+            listing_Standard.AddHorizontalLine(3f);
+            Widgets.EndScrollView();
+            //Widgets.Sc(rect2, ref vect, rect);
             
-            if (GUI.Button(new Rect(20, 70, 80, 20), "Level 2"))
-            {               
-            }
-          
-            if (GUI.Button(new Rect(20, 100, 80, 20), "Level 2"))
-            {
+            //listing_Standard.AddLabeledTextField("zzzzzzzzzzzzzzzzzz", ref strin);
+            //listing_Standard.AddHorizontalLine(3f);
+            //listing_Standard.Slider(licz, 0f, 6000f);
+            //listing_Standard.AddHorizontalLine(3f);
+            //listing_Standard.LineRectSpilter(out rect, 0.5f);
 
-            }
-         
-            if (GUI.Button(new Rect(20, 130, 80, 20), "Level 2"))
-            {
-            }
-   
-            if (GUI.Button(new Rect(20, 160, 80, 20), "Level 2"))
-            {
-            }
+
+
+            //listing_Standard.End();
+ 
+
         }
 
         public override bool Equals(object obj)
