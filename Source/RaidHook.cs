@@ -20,7 +20,7 @@ namespace RimStory.Harmony
             Log.Warning("  RAID  " + parms.points);
            
 
-            if (Resources.rng.Next(101) <= 100 )
+            if (Resources.rng.Next(101) <= Resources.randomChanceRaid)
             {
                 Resources.events.Add(new ABigThreat(Utils.CurrentDate(), parms.faction));
                 Log.Warning("Raid added.");

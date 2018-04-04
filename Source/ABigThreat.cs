@@ -12,6 +12,7 @@ namespace RimStory
         private Date date;
         private bool anniversary = true;
         private List<int> yearsWhenEventStarted = new List<int>();
+        private Faction faction;
 
         public ABigThreat()
         {
@@ -21,7 +22,7 @@ namespace RimStory
         public ABigThreat(Date date, Faction faction)
         {
             this.date = date;
-            Log.Message(date + " OPS");
+            this.faction = faction;
         }
 
         public Date Date()
