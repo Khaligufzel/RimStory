@@ -16,8 +16,6 @@ namespace RimStory.Harmony
         // Token: 0x06000157 RID: 343 RVA: 0x0000CD30 File Offset: 0x0000AF30       
         static void Postfix(IncidentWorker_RaidEnemy __instance, IncidentParms parms)
         {
-            Log.Warning("  RAID  " + parms.faction );
-            Log.Warning("  RAID  " + parms.points);
            
 
             if (Resources.rng.Next(101) <= Resources.randomChanceRaid)
