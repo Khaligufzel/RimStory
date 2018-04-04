@@ -12,8 +12,7 @@ namespace RimStory.Harmony
     [HarmonyPatch("Notify_CorpseBuried")]
     
     class CorpseBuried
-    {
-        // Token: 0x06000157 RID: 343 RVA: 0x0000CD30 File Offset: 0x0000AF30       
+    {      
         static void Postfix(Building_Grave __instance, Pawn worker)
         {
             Resources.lastGrave = __instance;

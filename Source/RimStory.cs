@@ -48,7 +48,6 @@ namespace RimStory
             Log.Message(map+" loaded.");
             Resources.TEST_MAP = map;
 
-            //Resources.RS_Save();
             base.MapLoaded(map);
 
             
@@ -56,27 +55,7 @@ namespace RimStory
 
             ///////////////////////////////////// One tick per hour \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
             HugsLibController.Instance.TickDelayScheduler.ScheduleCallback(() => {
-               // Log.Message(" "+ Resources.lastDeadPawn);
-                //if (Resources.lastDeadPawn != null)
-                //{
-                    
-                //    if (Resources.lastDeadPawn.Corpse != null)
-                //    {
-                        
-                //        if (map.listerThings.ThingsInGroup(ThingRequestGroup.Grave) != null)
-                //        {
-                            
-                //            foreach (Building_Grave grave in map.listerThings.ThingsInGroup(ThingRequestGroup.Grave))
-                //            {
-                //                if (grave.Corpse.InnerPawn == Resources.lastDeadPawn && grave.Corpse.InnerPawn != null)
-                //                {
-                                    
-                //                    Resources.lastGrave = grave;
-                //                }
-                //            }
-                //        }
-                //    }
-                //}
+
 
                 if (Resources.events.Count > 0)
                 {

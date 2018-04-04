@@ -58,7 +58,7 @@ namespace RimStory
 
         public bool TryStartEvent(Map map)
         {
-            //throw new NotImplementedException();
+        
             return false;
         }
     }

@@ -34,16 +34,7 @@ namespace RimStory
             }
             foreach(Pawn deadPawn in Resources.deadPawnsForMassFuneral)
             {
-                //if(deadPawn != null)
-                //{
-                //    foreach(Building_Grave grave in map.listerThings.ThingsInGroup(ThingRequestGroup.Grave))
-                //    {
-                //        if (grave.Corpse.InnerPawn == deadPawn)
-                //        {
-                //           Resources.deadPawnsForMassFuneralBuried.Add(deadPawn);
-                //        }
-                //    }
-                //}
+
             }
             foreach(Pawn deadPawn in Resources.deadPawnsForMassFuneralBuried)
             {

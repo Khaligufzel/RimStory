@@ -23,8 +23,6 @@ namespace RimStory.Harmony
                 Resources.deadPawns.Add(__instance);
                 Resources.deadPawnsForMassFuneral.Add(__instance);
 
-
-                //Resources.events.Add(new Funeral(Utils.CurrentDate(), __instance));
                 Resources.events.Add(new ADead(Utils.CurrentDate(), __instance));
 
                 if (!Resources.isMemorialDayCreated)
@@ -32,7 +30,7 @@ namespace RimStory.Harmony
                     Resources.events.Add(new AMemorialDay(Utils.CurrentDate(), __instance));
                     Resources.isMemorialDayCreated = true;
                 }
-                //Resources.lastDeadPawn = __instance;
+
             }
 
         }

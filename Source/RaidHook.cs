@@ -12,8 +12,7 @@ namespace RimStory.Harmony
     [HarmonyPatch("TryExecuteWorker")]
 
     class RaidHook
-    {
-        // Token: 0x06000157 RID: 343 RVA: 0x0000CD30 File Offset: 0x0000AF30       
+    {   
         static void Postfix(IncidentWorker_RaidEnemy __instance, IncidentParms parms)
         {
            
