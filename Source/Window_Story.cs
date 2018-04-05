@@ -19,7 +19,7 @@ namespace RimStory
         Rect outter = new Rect();
 
 
-        private static int defaultLogSize = 10000;
+        private static int defaultLogSize = 1000;
        
         List<String> lista = new List<string>();
         
@@ -43,9 +43,6 @@ namespace RimStory
             inner = new Rect(rect.position, logSize);
             outter = new Rect(rect.position, new Vector2(rect.width - 200, rect.height));
 
-           
-
-
 
             Widgets.BeginScrollView(outter, ref vect, inner, true);
             listing_Standard.Begin(rect);
@@ -56,18 +53,7 @@ namespace RimStory
                 listing_Standard.AddHorizontalLine(3f);
 
             }
-
-            //listing_Standard.AddLabelLine("RimHell");
-            //listing_Standard.AddHorizontalLine(1f);
-
-
-            //listing_Standard.AddHorizontalLine(1f);
-            //listing_Standard.AddLabeledRadioList("thehell", , ref strin);
-            //listing_Standard.AddHorizontalLine(1f);
-            //listing_Standard.AddLabeledNumericalTextField<int>("hellhellhellhell", ref xxx, minValue: 0, maxValue: 2000);
-
-            //listing_Standard.AddHorizontalLine(1f);
-            //listing_Standard.AddHorizontalLine(1f);
+           
             listing_Standard.End();
             Widgets.EndScrollView();
 
