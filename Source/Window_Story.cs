@@ -17,11 +17,12 @@ namespace RimStory
         Listing_Standard listing_Standard = new Listing_Standard();
         Rect inner = new Rect();
         Rect outter = new Rect();
+        Rect bigRect = new Rect();
 
 
         private static int defaultLogSize = 1000;
        
-        List<String> lista = new List<string>();
+       
         
 
         public override bool CausesMessageBackground()
@@ -37,39 +38,34 @@ namespace RimStory
         public override void DoWindowContents(Rect rect)
         {
             base.DoWindowContents(rect);
+            bigRect = rect;
 
-            logSize = new Vector2(rect.x, defaultLogSize+(30f*Resources.eventsLog.Count));
-
+            bigRect = new Rect(rect.position, new Vector2(rect.width, defaultLogSize + (50f * Resources.eventsLog.Count)));
+            logSize = new Vector2(rect.x, defaultLogSize + (50f * Resources.eventsLog.Count));
             inner = new Rect(rect.position, logSize);
             outter = new Rect(rect.position, new Vector2(rect.width - 200, rect.height));
 
-
+            listing_Standard.Begin(bigRect);
             Widgets.BeginScrollView(outter, ref vect, inner, true);
-            listing_Standard.Begin(rect);
 
-            foreach (IEvent e in Resources.eventsLog)
+            if (Resources.eventsLog != null)
             {
-                listing_Standard.AddLabelLine(e.ShowInLog());
-                listing_Standard.AddHorizontalLine(3f);
-
+                foreach (IEvent e in Resources.eventsLog)
+                {
+                    listing_Standard.AddLabelLine(e.ShowInLog());
+                    listing_Standard.AddHorizontalLine(3f);
+                }
             }
            
-            listing_Standard.End();
             Widgets.EndScrollView();
 
-
-            
+            listing_Standard.End();
         }
 
         public override bool Equals(object obj)
         {
             return base.Equals(obj);
-        }
-
-        public override void ExtraOnGUI()
-        {
-            base.ExtraOnGUI();
-        }
+        }    
 
         public override int GetHashCode()
         {
@@ -116,11 +112,17 @@ namespace RimStory
         public override void WindowUpdate()
         {
             base.WindowUpdate();
+           
         }
 
         protected override void SetInitialSizeAndPosition()
         {
             base.SetInitialSizeAndPosition();
+        }
+
+        public void ExposeData()
+        {
+            throw new NotImplementedException();
         }
     }
 }
