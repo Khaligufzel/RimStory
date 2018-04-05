@@ -14,6 +14,7 @@ namespace RimStory
         bool TryStartEvent(Map map);
         bool IsStillEvent();
         void EndEvent();
+        String ShowInLog();
         Date Date();
 
     }

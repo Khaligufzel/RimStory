@@ -21,9 +21,6 @@ namespace RimStory
         public static UnityEngine.Vector2 vect = new UnityEngine.Vector2(xxx, yyy);
 
 
-
-        
-
         public static int minHour = 10;
         public static int maxHour = 20;
 

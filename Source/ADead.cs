@@ -40,7 +40,11 @@ namespace RimStory
 
         public void ExposeData()
         {
-
+            Log.Message("Saving" + this);
+            Scribe_Values.Look(ref anniversary, "RS_Anniversary", true);
+            Scribe_References.Look(ref deadPawn, "RS_DeadPawn");
+            Scribe_Collections.Look(ref yearsWhenEventStarted, "RS_YearsWhenEventStarted", LookMode.Value);
+            Scribe_Deep.Look(ref date, "RS_DateAttacked");
         }
 
         public bool GetIsAnniversary()
@@ -49,6 +53,11 @@ namespace RimStory
         }
 
         public bool IsStillEvent()
+        {
+            throw new NotImplementedException();
+        }
+
+        public string ShowInLog()
         {
             throw new NotImplementedException();
         }

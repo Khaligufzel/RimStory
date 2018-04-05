@@ -14,6 +14,8 @@ namespace RimStory
         private static int sie = 0;
         private static Vector2 vect = new Vector2(sie, sie);
         Listing_Standard listing_Standard = new Listing_Standard();
+        Rect inner = new Rect();
+        Rect outter = new Rect();
 
         bool sett;
         int xxx;
@@ -35,27 +37,33 @@ namespace RimStory
         {
             base.DoWindowContents(rect);
 
+            inner = new Rect(rect.position, new Vector2(rect.x - 50, 2000));
+            outter = new Rect(rect.position, new Vector2(rect.width - 200, rect.height));
+
+           
 
 
 
-
-            Rect rect2 = new Rect(rect.position, new Vector2(rect.x-100, 2000));
-            Rect rect3 = new Rect(new Vector2(0,0), new Vector2(100, 2000));
-
-          
-            
-
-            Widgets.BeginScrollView(rect, ref vect, rect2, true);
+            Widgets.BeginScrollView(outter, ref vect, inner, true);
             listing_Standard.Begin(rect);
 
-            listing_Standard.AddLabelLine("RimHell");
-            listing_Standard.AddHorizontalLine(3f);
+            foreach (IEvent e in Resources.eventsLog)
+            {
+                listing_Standard.AddLabelLine(e.ShowInLog());
+                listing_Standard.AddHorizontalLine(3f);
+            }
+
+            //listing_Standard.AddLabelLine("RimHell");
+            //listing_Standard.AddHorizontalLine(1f);
+
+
+            //listing_Standard.AddHorizontalLine(1f);
             //listing_Standard.AddLabeledRadioList("thehell", , ref strin);
-            listing_Standard.AddHorizontalLine(3f);
+            //listing_Standard.AddHorizontalLine(1f);
             //listing_Standard.AddLabeledNumericalTextField<int>("hellhellhellhell", ref xxx, minValue: 0, maxValue: 2000);
 
-            listing_Standard.AddHorizontalLine(3f);
-            listing_Standard.AddHorizontalLine(3f);
+            //listing_Standard.AddHorizontalLine(1f);
+            //listing_Standard.AddHorizontalLine(1f);
             listing_Standard.End();
             Widgets.EndScrollView();
 

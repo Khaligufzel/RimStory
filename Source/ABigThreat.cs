@@ -38,7 +38,11 @@ namespace RimStory
 
         public void ExposeData()
         {
-
+            Log.Message("Saving" + this);
+            Scribe_Values.Look(ref anniversary, "ff", true);
+            Scribe_Collections.Look(ref yearsWhenEventStarted, "RS_yearsWhenEventStarted", LookMode.Value);
+            Scribe_References.Look(ref faction, "RS_FactionAttacked");
+            Scribe_Deep.Look(ref date, "RS_DateAttacked");
         }
 
         public bool GetIsAnniversary()
@@ -49,6 +53,11 @@ namespace RimStory
         public bool IsStillEvent()
         {
             throw new NotImplementedException();
+        }
+
+        public string ShowInLog()
+        {
+            return (date.day+" "+date.quadrum+" "+date.year+" "+faction.Name+" attacked your colony.");
         }
 
         public bool TryStartEvent()

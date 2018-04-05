@@ -69,7 +69,7 @@ namespace RimStory
                 if (Resources.deadPawnsForMassFuneralBuried.Count > 0)
                 {
                     
-                    if (Resources.dateLastFuneral == null || (Utils.CurrentDay() != Resources.dateLastFuneral.getDate().day && Utils.CurrentQuadrum() != Resources.dateLastFuneral.getDate().quadrum && Utils.CurrentYear() != Resources.dateLastFuneral.getDate().year))
+                    if (Resources.dateLastFuneral == null || (Utils.CurrentDay() != Resources.dateLastFuneral.GetDate().day && Utils.CurrentQuadrum() != Resources.dateLastFuneral.GetDate().quadrum && Utils.CurrentYear() != Resources.dateLastFuneral.GetDate().year))
                     {
                         Log.Message("3");
                     }
@@ -88,8 +88,6 @@ namespace RimStory
         public override void OnGUI()
         {
             base.OnGUI();
-
-            Log.Message("GUIUpdate");
         }
 
         public override void SettingsChanged()

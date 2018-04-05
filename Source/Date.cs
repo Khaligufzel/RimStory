@@ -14,6 +14,9 @@ namespace RimStory
         public Quadrum quadrum;
         public int year;
 
+        public Date()
+        {
+        }
  
 
         public Date(int day, Quadrum quadrum, int year)
@@ -25,10 +28,12 @@ namespace RimStory
 
         public void ExposeData()
         {
-            throw new NotImplementedException();
+            Scribe_Values.Look(ref day, "RS_DateDay");
+            Scribe_Values.Look(ref quadrum, "RS_DateQuadrum", Quadrum.Undefined);
+            Scribe_Values.Look(ref year, "RS_DateYear");
         }
 
-        public Date getDate()
+        public Date GetDate()
         {
             return this;
         }
