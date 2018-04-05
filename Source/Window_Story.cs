@@ -13,13 +13,14 @@ namespace RimStory
     {
         private static int sie = 0;
         private static Vector2 vect = new Vector2(sie, sie);
+        private static Vector2 logSize = new Vector2();
         Listing_Standard listing_Standard = new Listing_Standard();
         Rect inner = new Rect();
         Rect outter = new Rect();
 
-        bool sett;
-        int xxx;
-        int yyy;
+
+        private static int defaultLogSize = 10000;
+       
         List<String> lista = new List<string>();
         
 
@@ -37,7 +38,9 @@ namespace RimStory
         {
             base.DoWindowContents(rect);
 
-            inner = new Rect(rect.position, new Vector2(rect.x - 50, 2000));
+            logSize = new Vector2(rect.x, defaultLogSize+(30f*Resources.eventsLog.Count));
+
+            inner = new Rect(rect.position, logSize);
             outter = new Rect(rect.position, new Vector2(rect.width - 200, rect.height));
 
            
@@ -51,6 +54,7 @@ namespace RimStory
             {
                 listing_Standard.AddLabelLine(e.ShowInLog());
                 listing_Standard.AddHorizontalLine(3f);
+
             }
 
             //listing_Standard.AddLabelLine("RimHell");

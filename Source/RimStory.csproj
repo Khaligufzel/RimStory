@@ -81,6 +81,7 @@
     <Compile Include="Breakup.cs" />
     <Compile Include="CorpseBuried.cs" />
     <Compile Include="Debug_Tools.cs" />
+    <Compile Include="DoRecruitHook.cs" />
     <Compile Include="GetImmunity.cs" />
     <Compile Include="MassFuneral.cs" />
     <Compile Include="RandomBreakup.cs" />

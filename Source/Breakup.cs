@@ -65,7 +65,7 @@ namespace RimStory
 
         public string ShowInLog()
         {
-            return (date.day + " " + date.quadrum + " " + date.year + " " + pawn1.Name + " brokeup with " + pawn2.Name + ", because of " + thought);
+            return (date.day + " " + date.quadrum + " " + date.year + " " + pawn1.Name + " brokeup with " + pawn2.Name  );
         }
 
         public bool TryStartEvent()
