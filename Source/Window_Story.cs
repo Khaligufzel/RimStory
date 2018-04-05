@@ -11,12 +11,15 @@ namespace RimStory
 {
     class Window_Story : MainTabWindow
     {
+        private static int sie = 0;
+        private static Vector2 vect = new Vector2(sie, sie);
         Listing_Standard listing_Standard = new Listing_Standard();
 
         bool sett;
-        int licz = 20;
-        String strin = "siemaneczkooo";
-        String[] strinList = new String[5];
+        int xxx;
+        int yyy;
+        List<String> lista = new List<string>();
+        
 
         public override bool CausesMessageBackground()
         {
@@ -32,30 +35,32 @@ namespace RimStory
         {
             base.DoWindowContents(rect);
 
-            strinList[0] = "111111test1111";
-            strinList[1] = "22222test22222";
-            strinList[2] = "333333test3333";
-            strinList[3] = "444444test44444";
-            strinList[4] = "5555555test5555";
 
-            Rect rect2 = new Rect(new Vector2(100,0), new Vector2(100,100));
-            Vector2 vect = new Vector2(licz, licz);
+
+
+
+            Rect rect2 = new Rect(rect.position, new Vector2(rect.x-100, 2000));
+            Rect rect3 = new Rect(new Vector2(0,0), new Vector2(100, 2000));
+
+          
+            
 
             Widgets.BeginScrollView(rect, ref vect, rect2, true);
-
+            listing_Standard.Begin(rect);
 
             listing_Standard.AddLabelLine("RimHell");
             listing_Standard.AddHorizontalLine(3f);
-            listing_Standard.AddLabeledRadioList("thehell", strinList, ref strin);
+            //listing_Standard.AddLabeledRadioList("thehell", , ref strin);
             listing_Standard.AddHorizontalLine(3f);
-            listing_Standard.AddLabeledNumericalTextField<int>("hellhellhellhell", ref licz, minValue: 0, maxValue: 2000);
+            //listing_Standard.AddLabeledNumericalTextField<int>("hellhellhellhell", ref xxx, minValue: 0, maxValue: 2000);
 
             listing_Standard.AddHorizontalLine(3f);
             listing_Standard.AddHorizontalLine(3f);
+            listing_Standard.End();
             Widgets.EndScrollView();
-       
- 
 
+
+            
         }
 
         public override bool Equals(object obj)
@@ -86,6 +91,7 @@ namespace RimStory
         public override void PostOpen()
         {
             base.PostOpen();
+            
         }
 
         public override void PreClose()
@@ -96,6 +102,7 @@ namespace RimStory
         public override void PreOpen()
         {
             base.PreOpen();
+            
         }
 
         public override string ToString()

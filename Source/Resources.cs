@@ -16,10 +16,13 @@ namespace RimStory
         public static int randomChanceRaid = 6;
 
 
+        public static int xxx;
+        public static int yyy;
+        public static UnityEngine.Vector2 vect = new UnityEngine.Vector2(xxx, yyy);
 
 
 
-
+        
 
         public static int minHour = 10;
         public static int maxHour = 20;

@@ -88,6 +88,8 @@ namespace RimStory
         public override void OnGUI()
         {
             base.OnGUI();
+
+            Log.Message("GUIUpdate");
         }
 
         public override void SettingsChanged()
