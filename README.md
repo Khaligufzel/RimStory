@@ -39,10 +39,10 @@ none.
 - more events,
 - more everything.
 
-Thanks to:&#xD;
+Thanks to:
 
 
-	Serpyderpy for logo,&#xD;
-	Mehni for modding tips,&#xD;
-	Crioware for some translations &#xD;
+	Serpyderpy for logo,
+	Mehni for modding tips,
+	Crioware for some translations
 	SoggyNoodle for everything :)
