@@ -91,7 +91,7 @@ namespace RimStory
                     
                     if (Resources.dateLastFuneral == null || (Utils.CurrentDay() != Resources.dateLastFuneral.GetDate().day && Utils.CurrentQuadrum() != Resources.dateLastFuneral.GetDate().quadrum && Utils.CurrentYear() != Resources.dateLastFuneral.GetDate().year))
                     {
-                        Log.Message("3");
+                       // Log.Message("3");
                     }
 
                     if (MassFuneral.TryStartMassFuneral(map))

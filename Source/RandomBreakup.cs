@@ -14,7 +14,7 @@ namespace RimStory.Harmony
     {
         static void Postfix(Thought __result, ref Pawn initiator, ref Pawn recipient)
         {
-            //Log.Message(initiator.LabelShort + " brokeup with " + recipient.LabelShort);
+            
             Resources.eventsLog.Add(new Breakup(Utils.CurrentDate(), initiator, recipient, __result));            
         }
     }

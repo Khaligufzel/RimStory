@@ -38,7 +38,7 @@ namespace RimStory
 
         public void ExposeData()
         {
-            Log.Message("Saving" + this);
+           
             Scribe_Values.Look(ref anniversary, "ff", true);
             Scribe_Collections.Look(ref yearsWhenEventStarted, "RS_yearsWhenEventStarted", LookMode.Value);
             Scribe_References.Look(ref faction, "RS_FactionAttacked");

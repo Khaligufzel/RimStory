@@ -18,8 +18,7 @@ namespace RimStory
 
         public override bool TryMakePreToilReservations()
         {
-            Log.Message("TargetA: " + graveToVisit);
-            Log.Message("sprawdzam czy ok");          
+            
             return true;
         }
 
@@ -31,9 +30,9 @@ namespace RimStory
             
 
             yield return Toils_Goto.GotoThing(graveToVisit, PathEndMode.Touch);
-            Log.Message("zaczynam czekanie");
+           
             yield return Toils_General.Wait(1000);
-            Log.Message("koncze czekanie");
+            
 
             yield break;
             //yield return Toils_Interpersonal.WaitToBeAbleToInteract(this.pawn);

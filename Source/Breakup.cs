@@ -45,7 +45,7 @@ namespace RimStory
 
         public void ExposeData()
         {
-            Log.Message("Saving" + this);
+            
             Scribe_Values.Look(ref anniversary, "RS_Anniversary", true);
             Scribe_References.Look(ref pawn1, "RS_DeadPawn1");
             Scribe_References.Look(ref pawn2, "RS_DeadPawn2");

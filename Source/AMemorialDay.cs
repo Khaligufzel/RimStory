@@ -40,7 +40,7 @@ namespace RimStory
 
         public void ExposeData()
         {
-            Log.Message("Saving" + this);
+            
             Scribe_Values.Look(ref anniversary, "RS_Anniversary", true);
             Scribe_References.Look(ref deadPawn, "RS_DeadPawn", true);
             Scribe_Collections.Look(ref yearsWhenEventStarted, "RS_yearsWhenEventStarted", LookMode.Value);

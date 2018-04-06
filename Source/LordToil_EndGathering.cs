@@ -20,7 +20,7 @@ namespace RimStory
 
         public override void UpdateAllDuties()
         {
-            Log.Message("apdejting djuties"); //throw new NotImplementedException();
+            
         }
     }
 }
