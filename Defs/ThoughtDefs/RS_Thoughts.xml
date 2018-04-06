@@ -10,7 +10,7 @@
     <stages>
       <li>
         <label>Today is the day my lover died.</label>
-        <description>Nothing can replace my lover.</description>
+        <description>No one can replace my lover.</description>
         <baseMoodEffect>-15</baseMoodEffect>
       </li>
     </stages>
@@ -23,7 +23,7 @@
     <stages>
       <li>
         <label>Today is the day my spouse died.</label>
-        <description>Nothing can replace my dear spouse.</description>
+        <description>No one can replace my dear spouse.</description>
         <baseMoodEffect>-20</baseMoodEffect>
       </li>
     </stages>
@@ -36,7 +36,7 @@
     <stages>
       <li>
         <label>Today is the day my fiance died.</label>
-        <description>Nothing can replace my fiance.</description>
+        <description>No one can replace my fiance.</description>
         <baseMoodEffect>-15</baseMoodEffect>
       </li>
     </stages>
@@ -49,7 +49,7 @@
     <stages>
       <li>
         <label>Today is the day my child died.</label>
-        <description>Nothing can replace my poor child.</description>
+        <description>No one can replace my poor child.</description>
         <baseMoodEffect>-20</baseMoodEffect>
       </li>
     </stages>
