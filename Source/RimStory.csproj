@@ -97,6 +97,8 @@
     <Compile Include="Resources.cs" />
     <Compile Include="RimStory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RimStoryMod.cs" />
+    <Compile Include="RimStorySettings.cs" />
     <Compile Include="Saves.cs" />
     <Compile Include="StartMarriageCeremony.cs" />
     <Compile Include="TestFuneralToil.cs" />
