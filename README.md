@@ -9,6 +9,8 @@ That's why I made RimStory.
 
 RimStory logs all important events of life in a colony life for example: deaths, marriages, epic battles and failures as well.
 
+The colonists will organize anniversary parties, raise their glasses for their fallen comrades on the day they have died and so on!
+
 #### RimStory 
  06.04.2018 v 0.99
 
@@ -17,8 +19,8 @@ RimStory logs all important events of life in a colony life for example: deaths,
 - funerals,
 - marriage anniversaries,
 - Memorial Day,
-- Victory Days,
-- individual thoughts!
+- days of great victory,
+- individual thoughts.
 
 
 #### Compatibility:
@@ -28,11 +30,19 @@ Should work with everything.
 
 #### Saves:
 
-RimStory doesn't break saves, but events only after installation will be recorded and celebrated.
-
+Rimstory Shouldn't break saves although event preceading installation will not be recorded
 
 #### Known bugs:
+none.
 
 #### ToDo:
 - more events,
 - more everything.
+
+Thanks to:&#xD;
+
+
+	Serpyderpy for logo,&#xD;
+	Mehni for modding tips,&#xD;
+	Crioware for some translations &#xD;
+	SoggyNoodle for everything :)

@@ -4,57 +4,56 @@
 	<author>Khaligufzel</author>
 	<targetVersion>0.18.0</targetVersion>
 	<description> v 0.99 &#xD;
-	Thanks to:&#xD;
-	Serpyderpy for logo,&#xD;
-	Mehni for modding tips,&#xD;
-	Crioware for some translations &#xD;
-	
-	# RimStory
 
-Since starting my first colony in Rimworld I thought this game is about the Story.
-I remember well my first dead colonists, first marriage in colony... I remember how one guy, who barely know anything about medicine rescued all his pals. 
+# RimStory
+
+Since starting my first colony in Rimworld I thought the game should be about the Story.
+I remember well when my first colonist die, first marriage in colony, raids... i remember how one guy, who barely knew about medicine, rescued all his palls.
 
 I really, really miss those times.
 
-That's why Im making RimStory.
+That's why I made RimStory.
 
-RimStory is logging all important events in colony life- deads, marriages, great battles and failures. Colonists also remember those events- they will start marriage anniversary party, memorial day of fallen comrads etc.
+RimStory logs all important events of life in a colony life for example: deaths, marriages, epic battles and failures as well.
+
+The colonists will organize anniversary parties, raise their glasses for their fallen comrades on the day they have died and so on!
 
 #### RimStory 
- 04.04.2018 v 0.3
+ 06.04.2018 v 0.99
 
 #### Features:
 
-- Funerals (on day 7 and 14),
+- funerals,
 - marriage anniversaries,
-- Memory Day,
-- Victory Days,
-- more individual thoughts!
+- Memorial Day,
+- days of great victory,
+- individual thoughts.
 
 
 #### Compatibility:
 
- Should work with everything.
+Should work with everything.
 
 
 #### Saves:
 
-RimStory doesn't break saves, but events only after installation will be recorded and celebrated.
+Rimstory Shouldn't break saves although event preceading installation will not be recorded.
 
 
 #### Known bugs:
-
-Too many to list ;) (Really. You WILL see bugs!)
-
+none.
 
 #### ToDo:
-
-- kill the bugs,
-- RimStoryLogger,
 - more events,
 - more everything.
-	
-	
+
+Thanks to:&#xD;
+
+
+	Serpyderpy for logo,&#xD;
+	Mehni for modding tips,&#xD;
+	Crioware for some translations &#xD;
+	SoggyNoodle for everything :)
 	</description>
 	<url>https://steamcommunity.com/id/Khaligufzel/myworkshopfiles/?appid=294100</url>
 </ModMetaData>
