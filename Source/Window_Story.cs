@@ -26,8 +26,9 @@ namespace RimStory
         
 
         public override bool CausesMessageBackground()
-        {
+        {          
             return base.CausesMessageBackground();
+           
         }
 
         public override void Close(bool doCloseSound = true)
@@ -38,28 +39,31 @@ namespace RimStory
         public override void DoWindowContents(Rect rect)
         {
             base.DoWindowContents(rect);
-            bigRect = rect;
-
-            bigRect = new Rect(rect.position, new Vector2(rect.width, defaultLogSize + (50f * Resources.eventsLog.Count)));
-            logSize = new Vector2(rect.x, defaultLogSize + (50f * Resources.eventsLog.Count));
-            inner = new Rect(rect.position, logSize);
-            outter = new Rect(rect.position, new Vector2(rect.width - 200, rect.height));
-
-            listing_Standard.Begin(bigRect);
-            Widgets.BeginScrollView(outter, ref vect, inner, true);
-
-            if (Resources.eventsLog != null)
+            if (RimStoryMod.settings.enableLogging)
             {
-                foreach (IEvent e in Resources.eventsLog)
-                {
-                    listing_Standard.AddLabelLine(e.ShowInLog());
-                    listing_Standard.AddHorizontalLine(3f);
-                }
-            }
-           
-            Widgets.EndScrollView();
+                bigRect = rect;
 
-            listing_Standard.End();
+                bigRect = new Rect(rect.position, new Vector2(rect.width, defaultLogSize + (35f * Resources.eventsLog.Count)));
+                logSize = new Vector2(rect.x, defaultLogSize + (35f * Resources.eventsLog.Count));
+                inner = new Rect(rect.position, logSize);
+                outter = new Rect(rect.position, new Vector2(rect.width - 200, rect.height));
+
+                listing_Standard.Begin(bigRect);
+                Widgets.BeginScrollView(outter, ref vect, inner, true);
+
+                if (Resources.eventsLog != null)
+                {
+                    foreach (IEvent e in Resources.eventsLog)
+                    {
+                        listing_Standard.AddLabelLine(e.ShowInLog());
+                        listing_Standard.AddHorizontalLine(3f);
+                    }
+                }
+
+                Widgets.EndScrollView();
+
+                listing_Standard.End();
+            }
         }
 
         public override bool Equals(object obj)

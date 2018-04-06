@@ -50,7 +50,27 @@ namespace RimStory
                 {
                     foreach (IEvent e in Resources.events)
                     {                     
-                            e.TryStartEvent(map);                                                                            
+                            
+                        
+                        if(e is AMarriage && RimStoryMod.settings.enableMarriageAnniversary)
+                        {
+                            e.TryStartEvent(map);
+                        }
+
+                        if (e is AMemorialDay && RimStoryMod.settings.enableMemoryDay)
+                        {
+                            e.TryStartEvent(map);
+                        }
+
+                        if (e is ABigThreat && RimStoryMod.settings.enableDaysOfVictory)
+                        {
+                            e.TryStartEvent(map);
+                        }
+
+                        if (e is ADead && RimStoryMod.settings.enableIndividualThoughts)
+                        {
+                            e.TryStartEvent(map);
+                        }
                     }
                     
                 }
@@ -66,7 +86,7 @@ namespace RimStory
             ///////////////////////////////////// Mass funeral \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\   
             HugsLibController.Instance.TickDelayScheduler.ScheduleCallback(() => {
               
-                if (Resources.deadPawnsForMassFuneralBuried.Count > 0)
+                if (Resources.deadPawnsForMassFuneralBuried.Count > 0 && RimStoryMod.settings.enableFunerals)
                 {
                     
                     if (Resources.dateLastFuneral == null || (Utils.CurrentDay() != Resources.dateLastFuneral.GetDate().day && Utils.CurrentQuadrum() != Resources.dateLastFuneral.GetDate().quadrum && Utils.CurrentYear() != Resources.dateLastFuneral.GetDate().year))
