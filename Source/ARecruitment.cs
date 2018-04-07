@@ -46,7 +46,8 @@ namespace RimStory
 
         public string ShowInLog()
         {
-            return (date.day + " " + date.quadrum + " " + date.year + " " + recruiter.Name + " recruited " + recruitee.Name);
+            //return (date.day + " " + date.quadrum + " " + date.year + " " + recruiter.Name + " recruited " + recruitee.Name);
+            return (date.day + " " + date.quadrum + " " + date.year + " " + "ARecruitment".Translate(new object[] { recruiter.Name, recruitee.Name }));
         }
 
         public bool TryStartEvent()

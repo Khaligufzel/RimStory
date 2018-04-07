@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<LanguageData>
+
+
+<ColonyAttacked>{0} attacked your colony. </ColonyAttacked>
+<DayOfVictory>Day of {0} defeat.</DayOfVictory>
+<DayOfVictoryDesc>Your colonists are celebrating {0}'s defeat on\n\n {1}</DayOfVictoryDesc>
+
+<AMarriage>{0} and {1} married.</AMarriage>
+<AMarriageLetter>Marriage anniversary.</AMarriageLetter>
+<AMarriageDesc>{0} and {1} anniversary.</AMarriageDesc>
+
+<AMemorialDay>{0} died.</AMemorialDay>
+<AMemorialDayLetter>Memorial Day</AMemorialDayLetter>
+<AMemorialDayDesc>Colonist are gathering to honor fallen brothers and sisters.</AMemorialDayDesc>
+
+<ARecruitment>{0} recruited {1}.</ARecruitment>
+
+<ABreakup>{0} brokeup with {1}</ABreakup>
+
+<!-- Gatherings -->
+
+<FuneralCalledOff>Funeral called off.</FuneralCalledOff>
+<FuneralFinished>Funeral finished.</FuneralFinished>
+<FuneralLetter>Funeral.</FuneralLetter>
+<FuneralDesc>Colonists are gathering to honor:\n\n</FuneralDesc>
+
+<!-- Settings -->
+
+
+
+</LanguageData>

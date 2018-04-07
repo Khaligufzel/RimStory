@@ -57,7 +57,7 @@ namespace RimStory
 
         public string ShowInLog()
         {
-            return (date.day+" "+date.quadrum+" "+date.year+" "+faction.Name+" attacked your colony.");
+            return (date.day+" "+date.quadrum+" "+date.year+" "+ "ColonyAttacked".Translate(faction.Name));
         }
 
         public bool TryStartEvent()
@@ -93,7 +93,8 @@ namespace RimStory
 
                 yearsWhenEventStarted.Add(Utils.CurrentYear());
                 Lord lord = LordMaker.MakeNewLord(pawn.Faction, new LordJob_Joinable_Party(intVec, pawn), map, null);
-                Find.LetterStack.ReceiveLetter("Day of "+faction.Name+" defeat", "Your colonists are celebrating " + faction.Name + "'s defeat on \n" + date, LetterDefOf.PositiveEvent);
+                //Find.LetterStack.ReceiveLetter("Day of "+faction.Name+" defeat", "Your colonists are celebrating " + faction.Name + "'s defeat on \n" + date, LetterDefOf.PositiveEvent);
+                Find.LetterStack.ReceiveLetter("DayOfVictory".Translate(faction.Name), "DayOfVictoryDesc".Translate(new object[] {faction.Name, date }), LetterDefOf.PositiveEvent);
                 return true;
             }
 

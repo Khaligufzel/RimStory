@@ -59,7 +59,8 @@ namespace RimStory
 
         public string ShowInLog()
         {
-            return (date.day + " " + date.quadrum + " " + date.year + " " + deadPawn.Name + " died.");
+            return (date.day + " " + date.quadrum + " " + date.year + " " + "AMemorialDay".Translate(deadPawn.Name));
+            //return (date.day + " " + date.quadrum + " " + date.year + " " + deadPawn.Name + " died.");
         }
 
         public bool TryStartEvent()
@@ -98,7 +99,8 @@ namespace RimStory
 
                 yearsWhenEventStarted.Add(Utils.CurrentYear());
                 Lord lord = LordMaker.MakeNewLord(pawn.Faction, new LordJob_Joinable_Party(intVec, pawn), map, null);
-                Find.LetterStack.ReceiveLetter("Memorial Day", "Colonist are gathering to honor fallen colonists.", LetterDefOf.PositiveEvent);
+                //Find.LetterStack.ReceiveLetter("Memorial Day", "Colonist are gathering to honor fallen colonists.", LetterDefOf.PositiveEvent);
+                Find.LetterStack.ReceiveLetter("AMemorialDayLetter".Translate(), "AMemorialDayDesc".Translate(), LetterDefOf.PositiveEvent);
                 return true;
             }
             

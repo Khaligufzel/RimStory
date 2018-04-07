@@ -65,7 +65,8 @@ namespace RimStory
 
         public string ShowInLog()
         {
-            return (date.day + " " + date.quadrum + " " + date.year + " " + pawn1.Name + " brokeup with " + pawn2.Name  );
+            return (date.day + " " + date.quadrum + " " + date.year + " " + "ABreakup".Translate(new object[] {pawn1.Name, pawn2.Name }));
+            //return (date.day + " " + date.quadrum + " " + date.year + " " + pawn1.Name + " brokeup with " + pawn2.Name  );
         }
 
         public bool TryStartEvent()

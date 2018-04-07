@@ -83,12 +83,14 @@ namespace RimStory
 
             transition.AddTrigger(new Trigger_TickCondition(() => this.ShouldBeCalledOff(), 1));
             transition.AddTrigger(new Trigger_PawnLostViolently());
-            transition.AddPreAction(new TransitionAction_Message("Funeral called off.", MessageTypeDefOf.NegativeEvent, new TargetInfo(this.spot, base.Map, false)));
+            //transition.AddPreAction(new TransitionAction_Message("Funeral called off.", MessageTypeDefOf.NegativeEvent, new TargetInfo(this.spot, base.Map, false)));
+            transition.AddPreAction(new TransitionAction_Message("FuneralCalledOff".Translate(), MessageTypeDefOf.NegativeEvent, new TargetInfo(this.spot, base.Map, false)));
             stateGraph.AddTransition(transition);
             this.timeoutTrigger = new Trigger_TicksPassed(Rand.RangeInclusive(5000, 15000));
             Transition transition2 = new Transition(lordToil_Party, lordToil_End);
             transition2.AddTrigger(this.timeoutTrigger);
-            transition2.AddPreAction(new TransitionAction_Message("Funeral finished.", MessageTypeDefOf.SituationResolved, new TargetInfo(this.spot, base.Map, false)));
+            transition2.AddPreAction(new TransitionAction_Message("FuneralFinished".Translate(), MessageTypeDefOf.SituationResolved, new TargetInfo(this.spot, base.Map, false)));
+            //transition2.AddPreAction(new TransitionAction_Message("Funeral finished.", MessageTypeDefOf.SituationResolved, new TargetInfo(this.spot, base.Map, false)));
             stateGraph.AddTransition(transition2);
             return stateGraph;
         }
