@@ -35,7 +35,7 @@ namespace RimStory
 
         public Date Date()
         {
-            throw new NotImplementedException();
+            return date;
         }
 
         public void EndEvent()

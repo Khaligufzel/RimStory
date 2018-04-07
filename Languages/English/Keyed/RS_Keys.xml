@@ -19,12 +19,17 @@
 
 <ABreakup>{0} brokeup with {1}.</ABreakup>
 
+<ABondedAnimal>Colonist {0} bonded with {1}</ABondedAnimal>
+<ATamed>{0} tamed {1}</ATamed>
+
 <!-- Gatherings -->
 
 <FuneralCalledOff>Funeral called off.</FuneralCalledOff>
 <FuneralFinished>Funeral finished.</FuneralFinished>
 <FuneralLetter>Funeral.</FuneralLetter>
 <FuneralDesc>Colonists are gathering to honor:\n\n</FuneralDesc>
+
+
 
 <!-- Settings -->
 

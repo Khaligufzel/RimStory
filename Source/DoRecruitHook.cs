@@ -15,7 +15,9 @@ namespace RimStory.Harmony
     {
         static void Postfix(Pawn recruiter, Pawn recruitee)
         {
-            Resources.eventsLog.Add(new ARecruitment(Utils.CurrentDate(), recruiter, recruitee));
+            
+            Resources.eventsLog.Add(new ARecruitment(Utils.CurrentDate(), recruiter, recruitee));                       
+            
         }
     }
 }

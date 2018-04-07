@@ -12,11 +12,14 @@ namespace RimStory
         private Pawn recruiter;
         private Pawn recruitee;
 
+
         public ARecruitment(Date date, Pawn recruiter, Pawn recruitee)
         {
             this.date = date;
             this.recruiter = recruiter;
             this.recruitee = recruitee;
+
+           
         }
 
         public Date Date()
@@ -46,8 +49,17 @@ namespace RimStory
 
         public string ShowInLog()
         {
-            //return (date.day + " " + date.quadrum + " " + date.year + " " + recruiter.Name + " recruited " + recruitee.Name);
+            if (!recruitee.NonHumanlikeOrWildMan())
+            { 
             return (date.day + " " + date.quadrum + " " + date.year + " " + "ARecruitment".Translate(new object[] { recruiter.Name, recruitee.Name }));
+
+            }
+            else if(recruitee.NonHumanlikeOrWildMan())
+            {
+            return   (date.day + " " + date.quadrum + " " + date.year + " " + "ATamed".Translate(new object[] { recruiter.Name, recruitee.Name }));
+            }
+
+            return null;
         }
 
         public bool TryStartEvent()

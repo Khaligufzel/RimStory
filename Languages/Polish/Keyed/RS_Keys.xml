@@ -19,6 +19,9 @@
 
 <ABreakup>{0} zerwał z {1}.</ABreakup>
 
+<ABondedAnimal>{0} związał się z {1}</ABondedAnimal>
+<ATamed>{0} oswoił {1}</ATamed>
+
 <!-- Gatherings -->
 
 <FuneralCalledOff>Pogrzeb odwołany.</FuneralCalledOff>

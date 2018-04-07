@@ -73,11 +73,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ABigThreat.cs" />
+    <Compile Include="ABonded.cs" />
     <Compile Include="ADead.cs" />
     <Compile Include="AMarriage.cs" />
     <Compile Include="AMemorialDay.cs" />
     <Compile Include="ARecruitment.cs" />
     <Compile Include="ASurvivedDesease.cs" />
+    <Compile Include="BondHook.cs" />
     <Compile Include="Breakup.cs" />
     <Compile Include="CorpseBuried.cs" />
     <Compile Include="Debug_Tools.cs" />
