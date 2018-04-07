@@ -5,6 +5,7 @@ using System.Text;
 using Verse;
 using RimWorld;
 using HugsLib.Utils;
+using UnityEngine;
 
 namespace RimStory
 {
@@ -23,9 +24,10 @@ namespace RimStory
             Scribe_Collections.Look<Pawn>(ref Resources.deadPawnsForMassFuneralBuried, "RS_DeadPawnsBuried", LookMode.Reference, null, true);   
 
             Scribe_Values.Look<bool>(ref Resources.isMemorialDayCreated, "RS_Memorial_Day", false);
+            Scribe_Values.Look<Vector2>(ref Window_Story.logSize, "RS_Window_Size" );
 
 
-           
+
         }
     }
 
