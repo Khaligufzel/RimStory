@@ -12,6 +12,11 @@ namespace RimStory
         private Pawn recruiter;
         private Pawn recruitee;
 
+        public ARecruitment()
+        {
+
+        }
+
 
         public ARecruitment(Date date, Pawn recruiter, Pawn recruitee)
         {
@@ -34,7 +39,10 @@ namespace RimStory
 
         public void ExposeData()
         {
-            throw new NotImplementedException();
+            
+            Scribe_References.Look(ref recruiter, "RS_Recruiter", true);
+            Scribe_References.Look(ref recruitee, "RS_Recruitee", true);
+            Scribe_Deep.Look(ref date, "RS_DateRecruited");
         }
 
         public bool GetIsAnniversary()
