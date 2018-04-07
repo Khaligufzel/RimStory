@@ -12,12 +12,12 @@
 <AMarriageDesc>{0} and {1} anniversary.</AMarriageDesc>
 
 <AMemorialDay>{0} died.</AMemorialDay>
-<AMemorialDayLetter>Memorial Day</AMemorialDayLetter>
+<AMemorialDayLetter>Memorial Day.</AMemorialDayLetter>
 <AMemorialDayDesc>Colonist are gathering to honor fallen brothers and sisters.</AMemorialDayDesc>
 
 <ARecruitment>{0} recruited {1}.</ARecruitment>
 
-<ABreakup>{0} brokeup with {1}</ABreakup>
+<ABreakup>{0} brokeup with {1}.</ABreakup>
 
 <!-- Gatherings -->
 
@@ -28,6 +28,11 @@
 
 <!-- Settings -->
 
-
+<EnEventLogger>Enable events logger: </EnEventLogger>
+<EnFunerals>Enable funeral: </EnFunerals>
+<EnMarriage>Enable marriage anniversaries: </EnMarriage>
+<EnMemorialDay>Enable Memorial Day: <EnMemorialDay>
+<EnDaysOfVictory>Enable Days of Victory: </EnDaysOfVictory>
+<EnIndividualThoughts>Enable individual thoughts: </EnIndividualThoughts>
 
 </LanguageData>
