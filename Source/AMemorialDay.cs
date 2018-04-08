@@ -59,7 +59,10 @@ namespace RimStory
 
         public string ShowInLog()
         {
-            return (date.day + " " + date.quadrum + " " + date.year + " " + "AMemorialDay".Translate(deadPawn.Name));
+            if (deadPawn != null) {
+                return (date.day + " " + date.quadrum + " " + date.year + " " + "AMemorialDay".Translate(deadPawn.Name));
+            }
+            return (date.day + " " + date.quadrum + " " + date.year + " colonist died");
             //return (date.day + " " + date.quadrum + " " + date.year + " " + deadPawn.Name + " died.");
         }
 

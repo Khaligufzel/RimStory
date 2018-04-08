@@ -57,16 +57,19 @@ namespace RimStory
 
         public string ShowInLog()
         {
-            if (!recruitee.NonHumanlikeOrWildMan())
-            { 
-            return (date.day + " " + date.quadrum + " " + date.year + " " + "ARecruitment".Translate(new object[] { recruiter.Name, recruitee.Name }));
-
-            }
-            else if(recruitee.NonHumanlikeOrWildMan())
+            if (recruitee != null)
             {
-            return   (date.day + " " + date.quadrum + " " + date.year + " " + "ATamed".Translate(new object[] { recruiter.Name, recruitee.Name }));
-            }
 
+                if (!recruitee.NonHumanlikeOrWildMan())
+                {
+                    return (date.day + " " + date.quadrum + " " + date.year + " " + "ARecruitment".Translate(new object[] { recruiter.Name, recruitee.Name }));
+
+                }
+                else if (recruitee.NonHumanlikeOrWildMan())
+                {
+                    return (date.day + " " + date.quadrum + " " + date.year + " " + "ATamed".Translate(new object[] { recruiter.Name, recruitee.Name }));
+                }
+            }
             return null;
         }
 
