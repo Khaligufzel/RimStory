@@ -137,6 +137,12 @@ namespace RimStory
         public override void Tick(int currentTick)
         {
             base.Tick(currentTick);
+            if (RimStoryMod.settings.ISLOGGONNARESET)
+            {
+                Resources.eventsLog.Clear();
+                RimStoryMod.settings.ISLOGGONNARESET = false;
+            }
+
         }
 
         public override void Update()

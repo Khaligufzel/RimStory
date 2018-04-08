@@ -15,8 +15,7 @@ namespace RimStory
         public bool enableIndividualThoughts = true;
         public bool enableDaysOfVictory = true;
         public bool enableLogging = true;
-     
-
+        public bool ISLOGGONNARESET = false;
 
         public override void ExposeData()
         {

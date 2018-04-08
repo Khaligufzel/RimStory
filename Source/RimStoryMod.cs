@@ -27,6 +27,10 @@ namespace RimStory
             listing_Standard.AddLabeledCheckbox("EnMemorialDay".Translate(), ref settings.enableMemoryDay);
             listing_Standard.AddLabeledCheckbox("EnDaysOfVictory".Translate(), ref settings.enableDaysOfVictory);
             listing_Standard.AddLabeledCheckbox("EnIndividualThoughts".Translate(), ref settings.enableIndividualThoughts);
+            if (Prefs.DevMode)
+            {
+                listing_Standard.AddLabeledCheckbox("LOG RESET? LOG RESET? LOG RESET?", ref settings.ISLOGGONNARESET);
+            }
             //listing_Standard.AddLabeledCheckbox("Enable funeral" + ": ", ref settings.enableFunerals);
             //listing_Standard.AddLabeledCheckbox("Enable marriage anniversaries " + ": ", ref settings.enableMarriageAnniversary);
             //listing_Standard.AddLabeledCheckbox("Enable Memorial Day " + ": ", ref settings.enableMemoryDay);

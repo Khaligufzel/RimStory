@@ -57,8 +57,16 @@ namespace RimStory
                     {
                         if (e != null)
                         {
-                            listing_Standard.AddLabelLine(e.ShowInLog());
-                            listing_Standard.AddHorizontalLine(3f);
+                            if (e.ShowInLog() != null)
+                            {
+                                listing_Standard.AddLabelLine(e.ShowInLog());
+                                listing_Standard.AddHorizontalLine(3f);
+                            }
+                            else
+                            {
+                                listing_Standard.AddLabelLine("Sorry, I can't show record. Report to dev please. PS: I love you! ");
+                                listing_Standard.AddHorizontalLine(3f);
+                            }
                         }
                     }
                 }

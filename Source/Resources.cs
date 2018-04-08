@@ -44,7 +44,11 @@ namespace RimStory
         public static Date dateLastFuneral = null;
 
 
-        
+        public static void RESET_LOG()
+        {
+            eventsLog.Clear();
+        }
+
 
     }
 }

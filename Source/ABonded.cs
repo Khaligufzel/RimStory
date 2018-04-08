@@ -57,7 +57,11 @@ namespace RimStory
 
         public string ShowInLog()
         {
-            return (date.day + " " + date.quadrum + " " + date.year + " " + "ABondedAnimal".Translate(new object[] {pawn.Name, animal.Name }));
+            if (pawn != null && animal != null) {
+                return (date.day + " " + date.quadrum + " " + date.year + " " + "ABondedAnimal".Translate(new object[] { pawn.Name, animal.Name }));
+            }
+
+            return (date.day + " " + date.quadrum + " " + date.year + "bond with animal.");
         }
 
         public bool TryStartEvent()
