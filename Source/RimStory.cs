@@ -3,6 +3,7 @@ using HugsLib;
 using HugsLib.Utils;
 using RimWorld;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using Verse;
 
 namespace RimStory
@@ -24,6 +25,11 @@ namespace RimStory
         public override void FixedUpdate()
         {
             base.FixedUpdate();
+        }
+
+        public override void MapDiscarded(Map map)
+        {
+            base.MapDiscarded(map);
         }
 
         public override void MapGenerated(Map map)
@@ -108,6 +114,19 @@ namespace RimStory
         public override void OnGUI()
         {
             base.OnGUI();
+        }
+
+        public override void SceneLoaded(Scene scene)
+        {
+
+            ///////////////////////////////////// Dirty hacks for deleting static lists. Don't look. \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ 
+
+            base.SceneLoaded(scene);
+            if (GenScene.InEntryScene == true)
+            {
+                Resources.eventsLog.Clear();
+                Resources.events.Clear();
+            }
         }
 
         public override void SettingsChanged()

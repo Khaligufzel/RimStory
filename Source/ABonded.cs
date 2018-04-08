@@ -38,7 +38,11 @@ namespace RimStory
 
         public void ExposeData()
         {
-            throw new NotImplementedException();
+           
+            Scribe_References.Look(ref pawn, "RS_Trainer");
+            Scribe_References.Look(ref animal, "RS_PetBonded");
+            Scribe_Collections.Look(ref yearsWhenEventStarted, "RS_yearsWhenEventStarted", LookMode.Value);
+            Scribe_Deep.Look(ref date, "RS_DateBonded");
         }
 
         public bool GetIsAnniversary()
