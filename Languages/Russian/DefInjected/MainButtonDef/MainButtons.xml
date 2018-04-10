@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
 
-  <Story.label>История</Story.label>
-  <Story.description>Просмотреть историю колонии</Story.description>
+  <Story.label>РимСтори</Story.label>
+  <Story.description>Вкладка мода на историю колонии. Переводил GidReess, к нему же все притензии</Story.description>
 
 
 </LanguageData>

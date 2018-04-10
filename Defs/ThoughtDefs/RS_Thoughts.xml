@@ -62,7 +62,7 @@
     <stages>
       <li>
         <label>Today is the day my mother died.</label>
-        <description>Rest in peace, father.</description>
+        <description>Rest in peace, mother.</description>
         <baseMoodEffect>-10</baseMoodEffect>
       </li>
     </stages>
@@ -104,6 +104,19 @@
         <label>Year ago</label>
         <description>I miss you.</description>
         <baseMoodEffect>-5</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+  <ThoughtDef>
+    <defName>RS_ChitchatPast</defName>
+    <durationDays>1.0</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>Today is the day my lover died.</label>
+        <description>No one can replace my lover.</description>
+        <baseMoodEffect>50</baseMoodEffect>
       </li>
     </stages>
   </ThoughtDef>
