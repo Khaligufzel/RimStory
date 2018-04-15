@@ -69,6 +69,10 @@ namespace RimStory
                             }
                         }
                     }
+                    if(Resources.eventsLog.Count == 0)
+                    {
+                        listing_Standard.AddLabelLine("Nothing here yet.");
+                    }
                 }
 
                 Widgets.EndScrollView();

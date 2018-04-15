@@ -57,48 +57,62 @@ namespace RimStory
 
         public string ShowInLog()
         {
-            return (date.day+" "+date.quadrum+" "+date.year+" "+ "ColonyAttacked".Translate(faction.Name));
+            if (faction != null && date != null)
+            {
+                return (date.day + " " + date.quadrum + " " + date.year + " " + "ColonyAttacked".Translate(faction.Name));
+            }
+            else if (faction == null && date != null){
+                return (date.day + " " + date.quadrum + " " + date.year + " " + "Your colony was raided.");
+            }
+            else 
+            {
+                return ("Your colony was raided.");
+            }
         }
 
         public bool TryStartEvent()
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            return false;
         }
 
         public bool TryStartEvent(Map map)
         {
-            bool flag = true;
-            foreach (int y in yearsWhenEventStarted)
+            if (faction != null)
             {
-                if (y == Utils.CurrentYear())
+                bool flag = true;
+                foreach (int y in yearsWhenEventStarted)
                 {
-                    flag = false;
+                    if (y == Utils.CurrentYear())
+                    {
+                        flag = false;
+                    }
                 }
+
+                if (Utils.CurrentDay() == date.day && Utils.CurrentQuadrum() == date.quadrum && Utils.CurrentHour() >= Resources.minHour && Utils.CurrentHour() <= Resources.maxHour && Utils.CurrentYear() != date.year && flag)
+                {
+                    Pawn pawn = PartyUtility.FindRandomPartyOrganizer(Faction.OfPlayer, map);
+                    if (pawn == null)
+                    {
+                        return false;
+                    }
+                    IntVec3 intVec;
+                    if (!RCellFinder.TryFindPartySpot(pawn, out intVec))
+                    {
+                        return false;
+                    }
+
+                    yearsWhenEventStarted.Add(Utils.CurrentYear());
+
+                    yearsWhenEventStarted.Add(Utils.CurrentYear());
+                    Lord lord = LordMaker.MakeNewLord(pawn.Faction, new LordJob_Joinable_Party(intVec, pawn), map, null);
+                    //Find.LetterStack.ReceiveLetter("Day of "+faction.Name+" defeat", "Your colonists are celebrating " + faction.Name + "'s defeat on \n" + date, LetterDefOf.PositiveEvent);
+                    Find.LetterStack.ReceiveLetter("DayOfVictory".Translate(faction.Name), "DayOfVictoryDesc".Translate(new object[] { faction.Name, date }), LetterDefOf.PositiveEvent);
+                    return true;
+                }
+
+                flag = true;
             }
-
-            if (Utils.CurrentDay() == date.day && Utils.CurrentQuadrum() == date.quadrum && Utils.CurrentHour() >= Resources.minHour && Utils.CurrentHour() <= Resources.maxHour && Utils.CurrentYear() != date.year && flag)
-            {
-                Pawn pawn = PartyUtility.FindRandomPartyOrganizer(Faction.OfPlayer, map);
-                if (pawn == null)
-                {
-                    return false;
-                }
-                IntVec3 intVec;
-                if (!RCellFinder.TryFindPartySpot(pawn, out intVec))
-                {
-                    return false;
-                }
-
-                yearsWhenEventStarted.Add(Utils.CurrentYear());
-
-                yearsWhenEventStarted.Add(Utils.CurrentYear());
-                Lord lord = LordMaker.MakeNewLord(pawn.Faction, new LordJob_Joinable_Party(intVec, pawn), map, null);
-                //Find.LetterStack.ReceiveLetter("Day of "+faction.Name+" defeat", "Your colonists are celebrating " + faction.Name + "'s defeat on \n" + date, LetterDefOf.PositiveEvent);
-                Find.LetterStack.ReceiveLetter("DayOfVictory".Translate(faction.Name), "DayOfVictoryDesc".Translate(new object[] {faction.Name, date }), LetterDefOf.PositiveEvent);
-                return true;
-            }
-
-            flag = true;
             return false;
         }
 
