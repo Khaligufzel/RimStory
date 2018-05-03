@@ -82,9 +82,7 @@
     <Compile Include="BondHook.cs" />
     <Compile Include="Breakup.cs" />
     <Compile Include="CorpseBuried.cs" />
-    <Compile Include="Debug_Tools.cs" />
     <Compile Include="DoRecruitHook.cs" />
-    <Compile Include="GetImmunity.cs" />
     <Compile Include="IncidentShort.cs" />
     <Compile Include="IncidentWorkerHook.cs" />
     <Compile Include="MassFuneral.cs" />
@@ -92,7 +90,6 @@
     <Compile Include="ColonistDied.cs" />
     <Compile Include="Date.cs" />
     <Compile Include="IEvent.cs" />
-    <Compile Include="Funeral.cs" />
     <Compile Include="JobDriver_AttendFuneral.cs" />
     <Compile Include="JobGiver_AttendFuneral.cs" />
     <Compile Include="LordJob_RimStory.cs" />
