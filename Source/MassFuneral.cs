@@ -28,23 +28,21 @@ namespace RimStory
                 if (pawn == null)
                 {
                     return false;
-                }
+                }               
                 IntVec3 intVec;
                 if (!RCellFinder.TryFindPartySpot(pawn, out intVec))
                 {
                     return false;
                 }
-                foreach (Pawn deadPawn in Resources.deadPawnsForMassFuneral)
-                {
-
-                }
                 foreach (Pawn deadPawn in Resources.deadPawnsForMassFuneralBuried)
                 {
-                    deadPawnsNames = deadPawnsNames + deadPawn.Label + "\n";
+                    if (deadPawn != null)
+                    {
+                        deadPawnsNames = deadPawnsNames + deadPawn.Label + "\n";
+                    }
                 }
                 Lord lord = LordMaker.MakeNewLord(pawn.Faction, new LordJob_RimStory(Resources.lastGrave.Position, pawn), map, null);
-                Find.LetterStack.ReceiveLetter("FuneralLetter".Translate(), "FuneralDesc".Translate() + deadPawnsNames, LetterDefOf.NeutralEvent, Resources.lastGrave);
-                //Find.LetterStack.ReceiveLetter("Funeral", "Colonists are gathering to honor:\n\n" + deadPawnsNames, LetterDefOf.NeutralEvent, Resources.lastGrave);
+                Find.LetterStack.ReceiveLetter("FuneralLetter".Translate(), "FuneralDesc".Translate() + deadPawnsNames, LetterDefOf.NeutralEvent, Resources.lastGrave);               
 
                 deadPawnsNames = "";
                 return true;
