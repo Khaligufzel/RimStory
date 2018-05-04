@@ -90,6 +90,11 @@ namespace RimStory
                 {
                     return false;
                 }
+                if (pawn1.GetSpouse() != pawn2)
+                {
+                    return false;
+                }
+
                 IntVec3 intVec;
                 if (!RCellFinder.TryFindPartySpot(pawn1, out intVec))
                 {
