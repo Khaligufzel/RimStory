@@ -30,5 +30,8 @@
   <RS_DayBreakup.stages.0.label>もう何年だろう</RS_DayBreakup.stages.0.label>
   <RS_DayBreakup.stages.0.description>あなたがいないと寂しいですよ。</RS_DayBreakup.stages.0.description>
 
+  <RS_ChitchatPast.stages.0.label>今日は誰かの命日です。</RS_ChitchatPast.stages.0.label>
+  <RS_ChitchatPast.stages.0.description>覚えてる人は居るんでしょうか。</RS_ChitchatPast.stages.0.description>
+
 
 </LanguageData>

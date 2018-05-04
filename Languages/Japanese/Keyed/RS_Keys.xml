@@ -29,7 +29,10 @@
   <FuneralLetter>葬儀</FuneralLetter>
   <FuneralDesc>入植者たちが集まった:\n\n</FuneralDesc>
 
-
+  <!-- Incidents -->
+  <infestation>コロニーへの襲撃です。</infestation>
+  <tornado>なんてことだ竜巻だ。</tornado>
+  <massanimalinsanity>動物たちが狂気に侵された。</massanimalinsanity>
 
   <!-- Settings -->
 
