@@ -44,18 +44,18 @@ none.
 
 #### FAQ:
 
-# Q: Is RimStory compatible with X mod?
+##### Q: Is RimStory compatible with X mod?
 A: Yes! :) RimStory works with any mod. But, when you want to use RimStory with Psychology I advice to disable funerals in my mod (to not get doubled funerals)
 
 It's working with Days Matter too, but I advice to disable events in my mod or just use RimStory OR Days Matter :)
 
-# Q: Can you translate RimStory to X language?
+##### Q: Can you translate RimStory to X language?
 A: I would love to! But I know only Polish and English (ok... half English!). But... if you do have translation, just send me the files and I will implement your language ASAP :)
 
-# Q: Can I propose X/Y/Z?
+##### Q: Can I propose X/Y/Z?
 A: Yes!
 
-# Q: Does RimStory affects performance?
+##### Q: Does RimStory affects performance?
 A: NO! Not at ALL!
 
 #### Thanks to:
