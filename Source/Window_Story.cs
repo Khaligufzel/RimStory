@@ -19,6 +19,7 @@ namespace RimStory
         Rect outter = new Rect();
         Rect bigRect = new Rect();
 
+        Rect filterRect = new Rect();
 
         private static int defaultLogSize = 1000;
        
@@ -42,6 +43,7 @@ namespace RimStory
             if (RimStoryMod.settings.enableLogging)
             {
                 bigRect = rect;
+                
 
                 bigRect = new Rect(rect.position, new Vector2(rect.width, defaultLogSize + (35f * Resources.eventsLog.Count)));
                 logSize = new Vector2(rect.x, defaultLogSize + (35f * Resources.eventsLog.Count));
@@ -59,13 +61,14 @@ namespace RimStory
                         {
                             if (e.ShowInLog() != null)
                             {
-                                listing_Standard.AddLabelLine(e.ShowInLog());
-                                listing_Standard.AddHorizontalLine(3f);
-                            }
-                            else
-                            {
-                                listing_Standard.AddLabelLine("Sorry, I can't show record. Report to dev please. PS: I love you! ");
-                                listing_Standard.AddHorizontalLine(3f);
+                                if (!Resources.showRaidsInLog && e is ABigThreat){}
+                                else if (!Resources.showDeadColonistsInLog && e is AMemorialDay) { }
+                                else if (!Resources.showIncidentsInLog && e is IncidentShort) { }
+                                else
+                                {
+                                    listing_Standard.AddLabelLine(e.ShowInLog());
+                                    listing_Standard.AddHorizontalLine(3f);
+                                }
                             }
                         }
                     }
@@ -76,6 +79,17 @@ namespace RimStory
                 }
 
                 Widgets.EndScrollView();
+
+                
+
+                listing_Standard.End();
+
+
+                filterRect = new Rect(new Vector2(outter.width, rect.position.y), new Vector2(200, 200));
+                listing_Standard.Begin(filterRect);
+                listing_Standard.AddLabeledCheckbox("ShowRaidsInLog".Translate(), ref Resources.showRaidsInLog);
+                listing_Standard.AddLabeledCheckbox("ShowDeadColonistsInLog".Translate(), ref Resources.showDeadColonistsInLog);
+                listing_Standard.AddLabeledCheckbox("ShowIncidentsInLog".Translate(), ref Resources.showIncidentsInLog);
 
                 listing_Standard.End();
             }

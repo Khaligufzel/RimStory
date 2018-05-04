@@ -10,7 +10,7 @@ namespace RimStory.Harmony
 {
     [HarmonyPatch(typeof(IncidentWorker))]
     [HarmonyPatch("TryExecute")]
-    class IncidentWorkerHook
+    class IncidentWorkerHookShort
     {
         static void Postfix(IncidentWorker __instance, ref IncidentParms parms, bool __result)
         {
@@ -28,61 +28,81 @@ namespace RimStory.Harmony
 
                 if (__instance is IncidentWorker_AnimalInsanityMass)
                 {
-                    Resources.eventsLog.Add(new IncidentShort(Utils.CurrentDate(), __instance.def.defName));
+                    Resources.eventsLog.Add(new IncidentShort(Utils.CurrentDate(), "RS_" + __instance.def.defName));
                 }
-           
+
 
                 if (__instance is IncidentWorker_ManhunterPack)
                 {
-                    Resources.eventsLog.Add(new IncidentShort(Utils.CurrentDate(), __instance.def.defName));
+                    Resources.eventsLog.Add(new IncidentShort(Utils.CurrentDate(), "RS_" + __instance.def.defName));
                 }
 
                 if (__instance is IncidentWorker_ColdSnap)
                 {
-                    Resources.eventsLog.Add(new IncidentShort(Utils.CurrentDate(), __instance.def.defName));
+                    Resources.eventsLog.Add(new IncidentShort(Utils.CurrentDate(), "RS_" + __instance.def.defName));
                 }
 
                 if (__instance is IncidentWorker_HeatWave)
                 {
-                    Resources.eventsLog.Add(new IncidentShort(Utils.CurrentDate(), __instance.def.defName));
+                    Resources.eventsLog.Add(new IncidentShort(Utils.CurrentDate(), "RS_" + __instance.def.defName));
                 }
 
                 if (__instance is IncidentWorker_FarmAnimalsWanderIn)
                 {
-                    Resources.eventsLog.Add(new IncidentShort(Utils.CurrentDate(), __instance.def.defName));
+                    Resources.eventsLog.Add(new IncidentShort(Utils.CurrentDate(), "RS_" + __instance.def.defName));
                 }
 
                 if (__instance is IncidentWorker_Infestation)
                 {
-                    Resources.eventsLog.Add(new IncidentShort(Utils.CurrentDate(), __instance.def.defName));
+                    Resources.eventsLog.Add(new IncidentShort(Utils.CurrentDate(), "RS_" + __instance.def.defName));
                 }
 
                 if (__instance is IncidentWorker_RefugeeChased)
                 {
-                    Resources.eventsLog.Add(new IncidentShort(Utils.CurrentDate(), __instance.def.defName));
+                    Resources.eventsLog.Add(new IncidentShort(Utils.CurrentDate(), "RS_" + __instance.def.defName));
                 }
 
                 if (__instance is IncidentWorker_RefugeePodCrash)
                 {
-                    Resources.eventsLog.Add(new IncidentShort(Utils.CurrentDate(), __instance.def.defName));
+                    Resources.eventsLog.Add(new IncidentShort(Utils.CurrentDate(), "RS_" + __instance.def.defName));
                 }
 
                 if (__instance is IncidentWorker_Tornado)
                 {
-                    Resources.eventsLog.Add(new IncidentShort(Utils.CurrentDate(), __instance.def.defName));
+                    Resources.eventsLog.Add(new IncidentShort(Utils.CurrentDate(), "RS_" + __instance.def.defName));
                 }
 
                 if (__instance is IncidentWorker_WandererJoin)
                 {
-                    Resources.eventsLog.Add(new IncidentShort(Utils.CurrentDate(), __instance.def.defName));
+                    Resources.eventsLog.Add(new IncidentShort(Utils.CurrentDate(), "RS_" + __instance.def.defName));
                 }
-                
+
+                ////////////////////// DIRTY HACKS \\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+                if(__instance.def.defName == "VolcanicWinter")
+                {
+                    Resources.eventsLog.Add(new IncidentShort(Utils.CurrentDate(), "RS_" + __instance.def.defName));
+                }
+
+                if (__instance.def.defName == "ToxicFallout")
+                {
+                    Resources.eventsLog.Add(new IncidentShort(Utils.CurrentDate(), "RS_" + __instance.def.defName));
+                }
+
                 Log.Warning(__instance.def.defName);
 
-
             }
+           
+        }
+    }
 
-            //Resources.eventsLog.Add(new Breakup(Utils.CurrentDate(), initiator, recipient, __result));
+    [HarmonyPatch(typeof(GameCondition))]
+    [HarmonyPatch("Init")]
+    class IncidentWorkerHookLong
+    {
+        static void Postfix(IncidentWorker __instance)
+        {
+            Log.Message("it works "+__instance.def.defName);
         }
     }
 }

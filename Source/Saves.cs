@@ -26,6 +26,10 @@ namespace RimStory
             Scribe_Values.Look<bool>(ref Resources.isMemorialDayCreated, "RS_Memorial_Day", false);
             Scribe_Values.Look<Vector2>(ref Window_Story.logSize, "RS_Window_Size" );
 
+            Scribe_Values.Look<bool>(ref Resources.showRaidsInLog, "RS_ShowRaidInLog", true);
+            Scribe_Values.Look<bool>(ref Resources.showRaidsInLog, "RS_ShowDeadColonistsInLog", true);
+            Scribe_Values.Look<bool>(ref Resources.showRaidsInLog, "RS_showIncidentsInLog", true);
+
 
 
         }

@@ -43,6 +43,9 @@ namespace RimStory
         public static bool isMemorialDayCreated = false;
         public static Date dateLastFuneral = null;
 
+        public static bool showRaidsInLog = true;
+        public static bool showDeadColonistsInLog = true;
+        public static bool showIncidentsInLog = true;
 
         public static void RESET_LOG()
         {
