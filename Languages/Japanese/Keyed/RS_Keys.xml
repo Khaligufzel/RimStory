@@ -29,6 +29,23 @@
   <FuneralLetter>葬儀</FuneralLetter>
   <FuneralDesc>入植者たちが集まった:\n\n</FuneralDesc>
 
+  <!-- Incidents -->
+
+  <RS_Infestation>コロニーへの襲撃があった</RS_Infestation>
+  <RS_Tornado>トルネードが発生した</RS_Tornado>
+  <RS_AnimalInsanityMass>動物が暴走した</RS_AnimalInsanityMass>
+  <RS_WandererJoin>新しい入植者があなたのコロニーに加入に来た</RS_WandererJoin>
+  <RS_ManhunterPack>ヒト狩り集団がコロニーを襲撃した</RS_ManhunterPack>
+  <RS_RefugeeChased>亡命者がコロニーに助けを求めてきた</RS_RefugeeChased>
+  <RS_RefugeePodCrash>脱出ポッドがマップ上に墜落した</RS_RefugeePodCrash>
+  <RS_Alphabeavers>アルファビーバーの群れが現れた</RS_Alphabeavers>
+  <RS_FarmAnimalsWanderIn>動物たちがコロニーに加わった</RS_FarmAnimalsWanderIn>
+  <RS_PoisonShipPartCrash>汚染された船が墜落した</RS_PoisonShipPartCrash>
+  <RS_PsychicEmanatorShipPartCrash>サイキック船が墜落した</RS_PsychicEmanatorShipPartCrash>
+  <RS_ColdSnap>寒波が始まった</RS_ColdSnap>
+  <RS_HeatWave>熱波が始まった</RS_HeatWave>
+  <RS_ToxicFallout>死の灰が降り始めた</RS_ToxicFallout>
+  <RS_VolcanicWinter>火山の冬が始まった</RS_VolcanicWinter>
 
 
   <!-- Settings -->
@@ -39,5 +56,10 @@
   <EnMemorialDay>命日を有効：</EnMemorialDay>
   <EnDaysOfVictory>戦勝記念日を有効：</EnDaysOfVictory>
   <EnIndividualThoughts>個人の記念日を有効：</EnIndividualThoughts>
+
+  <!-- Story log filters -->
+  <ShowRaidsInLog>襲撃を表示</ShowRaidsInLog>
+  <ShowDeadColonistsInLog>入植者の死を表示</ShowDeadColonistsInLog>
+  <ShowIncidentsInLog>事件を表示</ShowIncidentsInLog>
 
 </LanguageData>

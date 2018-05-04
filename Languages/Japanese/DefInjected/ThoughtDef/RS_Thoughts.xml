@@ -30,5 +30,8 @@
   <RS_DayBreakup.stages.0.label>もう何年だろう</RS_DayBreakup.stages.0.label>
   <RS_DayBreakup.stages.0.description>あなたがいないと寂しいですよ。</RS_DayBreakup.stages.0.description>
 
+  <RS_ChitchatPast.stages.0.label>もう何年だろう(噂話)</RS_ChitchatPast.stages.0.label>
+  <RS_ChitchatPast.stages.0.description>あの人が居なくなって何年だろうと話題になりました。</RS_ChitchatPast.stages.0.description>
+
 
 </LanguageData>
