@@ -11,7 +11,7 @@ RimStory logs all important events of life in a colony life for example: deaths,
 
 The colonists will organize anniversary parties, raise their glasses for their fallen comrades on the day they have died and so on!
 
-#### RimStory 
+#### RimStory  
  04.05.2018 v 1.1
 
 #### Features:
