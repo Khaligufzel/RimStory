@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<LanguageData>
+
+
+<ColonyAttacked>{0} a attaqué votre colonie. </ColonyAttacked>
+<DayOfVictory>Day of {0} defeat.</DayOfVictory>
+<DayOfVictoryDesc>Vos colons célèbrent la victoire. {0}'s defeat on\n\n {1}</DayOfVictoryDesc>
+
+<AMarriage>{0} et {1} se sont marriés.</AMarriage>
+<AMarriageLetter>Anniversaire de Marriage.</AMarriageLetter>
+<AMarriageDesc>{0} et {1} anniversaire.</AMarriageDesc>
+
+<AMemorialDay>{0} est mort.</AMemorialDay>
+<AMemorialDayLetter>Memorial Day.</AMemorialDayLetter>
+<AMemorialDayDesc>Les colons se rassemblent pour honorer leurs frères et soeurs.</AMemorialDayDesc>
+
+<ARecruitment>{0} a recruté {1}.</ARecruitment>
+
+<ABreakup>{0} A rompu avec {1}.</ABreakup>
+
+<ABondedAnimal>Colonist {0} C'est lié à {1}</ABondedAnimal>
+<ATamed>{0} A apprivoisé {1}</ATamed>
+
+<!-- Gatherings -->
+
+<FuneralCalledOff>Funérailles annulés.</FuneralCalledOff>
+<FuneralFinished>Funérailles sont finies.</FuneralFinished>
+<FuneralLetter>Funérailles.</FuneralLetter>
+<FuneralDesc>Vos colons se regroupes pour honorer les morts:\n\n</FuneralDesc>
+
+<!-- Incidents -->
+
+<RS_Infestation>Une infestation a eu lieu dans votre colonie.</RS_Infestation>
+<RS_Tornado>Tornade.</RS_Tornado>
+<RS_AnimalInsanityMass>Un animal est devenu fou.</RS_AnimalInsanityMass>
+<RS_WandererJoin>Un Vagabond a éssayer de rejoindre votre colonie. </RS_WandererJoin>
+<RS_ManhunterPack>Des chasseurs d'humains on attaqués votre colonie.</RS_ManhunterPack>
+<RS_RefugeeChased>Un réfugié à demandé de l'aide a votre colonie.</RS_RefugeeChased>
+<RS_RefugeePodCrash>Un réfugié c'est crashé sur votre territoir.</RS_RefugeePodCrash>
+<RS_Alphabeavers>Des Alphacastors.</RS_Alphabeavers>
+<RS_FarmAnimalsWanderIn>Un animal a rejoin votre colonie.</RS_FarmAnimalsWanderIn>
+<RS_PoisonShipPartCrash>Un vaisseau empoisonné s'est crashé.</RS_PoisonShipPartCrash>
+<RS_PsychicEmanatorShipPartCrash>Un vaisseau Psychique c'est crashé.</RS_PsychicEmanatorShipPartCrash>
+<RS_ColdSnap>Début d'un coup de froid.</RS_ColdSnap>
+<RS_HeatWave>Début d'une vague de chaleur</RS_HeatWave>
+<RS_ToxicFallout>Début d'une pluie Toxique</RS_ToxicFallout>
+<RS_VolcanicWinter>Début d'un Hiver Volcanique.</RS_VolcanicWinter>
+
+
+<!-- Settings -->
+
+<EnEventLogger>Activer les évenements: </EnEventLogger>
+<EnFunerals>Activer les funérailles: </EnFunerals>
+<EnMarriage>Activé les anniversaires de marriages: </EnMarriage>
+<EnMemorialDay>Activer les jour d'honneur aux morts: </EnMemorialDay>
+<EnDaysOfVictory>Activer les jours de victoire: </EnDaysOfVictory>
+<EnIndividualThoughts>Activer les pensées individuelles: </EnIndividualThoughts>
+
+<!-- Story log filters -->
+<ShowRaidsInLog>Montrer les raids</ShowRaidsInLog>
+<ShowDeadColonistsInLog>Montrer les colons morts</ShowDeadColonistsInLog>
+<ShowIncidentsInLog>Montrer les incidents</ShowIncidentsInLog>
+
+</LanguageData>
